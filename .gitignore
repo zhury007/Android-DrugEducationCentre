@@ -8,6 +8,9 @@
 # Java class files
 *.class
 
+# Python class files
+*.pyc
+
 # Generated files
 bin/
 gen/
@@ -63,3 +66,4 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
+PyServer/DrugEducationCentreServer/DrugEducationCentreServer/__init__.pyc
