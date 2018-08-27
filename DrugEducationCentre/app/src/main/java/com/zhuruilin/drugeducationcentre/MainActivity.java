@@ -1,5 +1,7 @@
 package com.zhuruilin.drugeducationcentre;
 
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -9,14 +11,29 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.youth.banner.Banner;
+import com.youth.banner.BannerConfig;
+import com.youth.banner.Transformer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public static final String ANDROID_RESOURCE = "android.resource://";
+    public static final String FOREWARD_SLASH = "/";
+
+    private static Uri resourceIdToUri(Context context, int resourceId) {
+        return Uri.parse(ANDROID_RESOURCE + context.getPackageName() + FOREWARD_SLASH + resourceId);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +63,26 @@ public class MainActivity extends AppCompatActivity
         Banner banner = (Banner) findViewById(R.id.banner);
         //设置图片加载器
         banner.setImageLoader(new GlideImageLoader());
+        Log.d("==========",resourceIdToUri(this, R.drawable.banner_4).toString());
+
+        List images = new ArrayList();
+        List titles = new ArrayList();
+        images.add(resourceIdToUri(this, R.drawable.banner_1).toString());
+        images.add(resourceIdToUri(this, R.drawable.banner_2).toString());
+        images.add(resourceIdToUri(this, R.drawable.banner_3).toString());
+        images.add(resourceIdToUri(this, R.drawable.banner_4).toString());
+
+        titles.add("Drug driving is a serious road safety issue contributing to death and serious injury on South Australian roads.");
+        titles.add("Studies show that illicit drugs impair the skills needed to operate a motor vehicle safely. ");
+        titles.add("Road Safety figures for 2017 show that drug driving was a contributing factor in 25% of road fatalities.");
+        titles.add("Speed is a major behavioural issue contributing to fatalities and serious injuries on South Australian roads.");
+        //放标题的集合
         //设置图片集合
-//        banner.setImages(images);
+        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE);
+        banner.setImages(images);
+        banner.setBannerTitles(titles);
+        banner.setDelayTime(10000);
+        banner.setBannerAnimation(Transformer.FlipHorizontal);
         //banner设置方法全部调用完毕时最后调用
         banner.start();
     }
