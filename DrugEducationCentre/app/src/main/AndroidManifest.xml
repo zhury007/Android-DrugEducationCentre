@@ -25,7 +25,8 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity android:name=".QuestionnaireActivity"></activity>
+        <activity android:name=".QuestionnaireActivity" />
+        <activity android:name=".LibraryActivity"></activity>
     </application>
 
 </manifest>

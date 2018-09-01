@@ -1,6 +1,7 @@
 package com.zhuruilin.drugeducationcentre;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,6 +16,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -22,7 +24,6 @@ import com.youth.banner.Transformer;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 
 public class MainActivity extends AppCompatActivity
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity
         Banner banner = (Banner) findViewById(R.id.banner);
         //设置图片加载器
         banner.setImageLoader(new GlideImageLoader());
-        Log.d("==========",resourceIdToUri(this, R.drawable.banner_4).toString());
+        Log.d("==========", resourceIdToUri(this, R.drawable.banner_4).toString());
 
         List images = new ArrayList();
         List titles = new ArrayList();
@@ -85,6 +86,16 @@ public class MainActivity extends AppCompatActivity
         banner.setBannerAnimation(Transformer.FlipHorizontal);
         //banner设置方法全部调用完毕时最后调用
         banner.start();
+
+        // ================
+        Button btn_explore = (Button) findViewById(R.id.button_explore);
+        btn_explore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LibraryActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
