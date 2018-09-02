@@ -1,8 +1,9 @@
 package com.zhuruilin.drugeducationcentre;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -19,8 +20,11 @@ public class LibraryActivity extends AppCompatActivity {
         btn_explore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LibraryActivity.this, QuestionnaireActivity.class);
+                Uri uri = Uri.parse("https://wj.qq.com/s/2342832/f761");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
+//                Intent intent = new Intent(LibraryActivity.this, QuestionnaireActivity.class);
+//                startActivity(intent);
             }
         });
     }
