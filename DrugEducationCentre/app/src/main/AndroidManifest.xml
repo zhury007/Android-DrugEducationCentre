@@ -27,6 +27,8 @@
             android:label="@string/title_activity_settings" />
         <activity android:name=".QuestionnaireActivity" />
         <activity android:name=".LibraryActivity"></activity>
+        <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="false" />
     </application>
 
 </manifest>

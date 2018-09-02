@@ -1,9 +1,12 @@
 package com.zhuruilin.drugeducationcentre;
 
+import android.net.http.SslError;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -16,13 +19,20 @@ public class QuestionnaireActivity extends AppCompatActivity {
         setContentView(R.layout.activity_questionnaire);
 
         webview = (WebView) findViewById(R.id.webView_questionnaire);
-        webview.loadUrl("https://wj.qq.com/s/2342832/f761");
+        WebSettings webSettings = webview.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setAllowFileAccess(true);
+        webSettings.setBuiltInZoomControls(true);
+//        webview.loadUrl("http://www.baidu.com");
 
         webview.setWebViewClient(new WebViewClient() {
             @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
+            public void onReceivedSslError(WebView view,
+                                           SslErrorHandler handler, SslError error) {
+                // TODO Auto-generated method stub
+                // handler.cancel();// Android默认的处理方式
+                handler.proceed();// 接受所有网站的证书
+                // handleMessage(Message msg);// 进行其他处理
             }
         });
 
@@ -38,6 +48,7 @@ public class QuestionnaireActivity extends AppCompatActivity {
                 }
             }
         });
+        webview.loadUrl("https://wj.qq.com/s/2342832/f761");
     }
 
     @Override
