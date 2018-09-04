@@ -52,7 +52,7 @@
         android:background="@android:color/background_light"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword"
+        android:inputType="textVisiblePassword"
         android:padding="8dp"
         app:layout_constraintBottom_toTopOf="@+id/Register_button"
         app:layout_constraintEnd_toEndOf="parent"
