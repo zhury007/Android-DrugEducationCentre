@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/UserNameText"
         android:layout_width="320dp"
         android:layout_height="45dp"
         android:layout_marginBottom="8dp"
@@ -35,15 +35,15 @@
         android:layout_marginStart="8dp"
         android:background="@android:color/background_light"
         android:ems="10"
-        android:hint="Email address"
+        android:hint="User Name"
         android:inputType="textPersonName"
         android:padding="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText6"
+        app:layout_constraintBottom_toTopOf="@+id/passworkText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/passworkText"
         android:layout_width="320dp"
         android:layout_height="45dp"
         android:layout_marginBottom="44dp"
@@ -71,7 +71,7 @@
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
         android:typeface="sans"
-        app:layout_constraintBottom_toTopOf="@+id/editText5"
+        app:layout_constraintBottom_toTopOf="@+id/UserNameText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />

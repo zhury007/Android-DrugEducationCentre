@@ -25,7 +25,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/UserNameText2"
         android:layout_width="250dp"
         android:layout_height="45dp"
         android:layout_marginBottom="8dp"
@@ -36,12 +36,12 @@
         android:hint="User name"
         android:inputType="textPersonName"
         android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/passworkText2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/passworkText2"
         android:layout_width="250dp"
         android:layout_height="45dp"
         android:layout_marginBottom="44dp"
@@ -81,7 +81,7 @@
         android:background="@drawable/btn_normal"
         android:fadingEdge="none"
         android:shadowColor="?attr/editTextColor"
-        android:text=" Sign in with E-mail"
+        android:text="Click to register"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,7 +100,7 @@
         android:textAllCaps="false"
         android:textColor="@android:color/background_light"
         android:textColorHighlight="@android:color/holo_blue_bright"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/UserNameText2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
