@@ -7,9 +7,7 @@ import android.widget.ImageView;
 
 import com.youth.banner.loader.ImageLoader;
 
-/**
- * Created by iwof9 on 2018/8/26.
- */
+
 
 public class GlideImageLoader extends ImageLoader {
     @Override
