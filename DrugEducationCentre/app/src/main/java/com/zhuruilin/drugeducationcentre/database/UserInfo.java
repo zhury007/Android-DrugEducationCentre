@@ -20,5 +20,13 @@ public class UserInfo {
         return isLogin;
     }
 
+    public void doLogin(String name,String email){
+        this.name = name;
+        this.email = email;
+        this.isLogin = true;
+    }
 
+    public String getEmail() {
+        return email;
+    }
 }

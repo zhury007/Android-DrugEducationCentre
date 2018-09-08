@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -100,13 +101,24 @@ public class MainActivity extends AppCompatActivity
         });
 
         Button btn_login = (Button) findViewById(R.id.button_login);
-        btn_login.setOnClickListener(new View.OnClickListener(){
+        btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
+
+        Button btn_regist = (Button) findViewById(R.id.button_regist);
+        btn_regist.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(MainActivity.this, RegistActivity.class);
+                        startActivity(intent);
+                    }
+                }
+        );
     }
 
     @Override
@@ -166,14 +178,18 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void ShowActionBarDrawerToggle(){
-        if(UserInfo.getInstance().IsLogin()){
+    public void ShowActionBarDrawerToggle() {
+        if (UserInfo.getInstance().IsLogin()) {
+
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                     this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
             drawer.setDrawerListener(toggle);
             toggle.syncState();
+
+            TextView textViewEmail = (TextView) findViewById(R.id.textView_email);
+            textViewEmail.setText("eeee");
         }
     }
 }

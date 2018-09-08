@@ -82,7 +82,7 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
+    <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
@@ -92,4 +92,8 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="ServerAddr">192.168.1.2:3001</string>
+    <string name="title_activity_regist">Sign up</string>
+    <string name="action_sign_up">Sign up</string>
+    <string name="error_invalid_password2">Two input password must be consistent</string>
 </resources>
