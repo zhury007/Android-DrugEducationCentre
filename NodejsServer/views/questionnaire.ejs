@@ -1,0 +1,21 @@
+<%- include header %>
+  <div class="container">
+    <form class="col-sm-offset-4 col-sm-4 form-horizontal" role="form" method="post">
+      <fieldset>
+        <% if(locals.islogin) { %>
+          用户：
+          <h3>
+            <%= test %>
+          </h3>已经登陆。<br>
+          <a class="btn" href="/logout">登出</a>
+          <div class="col-sm-offset-3 col-sm-9">
+            <button type="submit" class="btn btn-primary">获取试卷</button>
+          </div>
+
+          <a class="btn" href="/question">进入获取试卷题目页面</a>
+  </div>
+  <% } %>
+    </fieldset>
+    </form>
+    </div>
+    <%- include footer %>
