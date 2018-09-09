@@ -17,7 +17,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -187,9 +186,6 @@ public class MainActivity extends AppCompatActivity
                     this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
             drawer.setDrawerListener(toggle);
             toggle.syncState();
-
-            TextView textViewEmail = (TextView) findViewById(R.id.textView_email);
-            textViewEmail.setText("eeee");
         }
     }
 }

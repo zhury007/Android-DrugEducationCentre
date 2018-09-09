@@ -12,3 +12,6 @@
 - Username: zhury007
 - Email address: zrl108@163.com
 - Password: qq123456
+
+# run
+- python manage.py runserver

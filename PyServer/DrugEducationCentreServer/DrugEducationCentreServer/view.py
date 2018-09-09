@@ -29,14 +29,15 @@ def regist(req):
 
             user = Tbl_User.objects.filter(account__exact=account)
             if user:
-                return HttpResponse(json.dumps({"error": 1}))
-            else:
                 Tbl_User.objects.create(
                     username=username,
                     account=account,
                     password=password
                 )
                 return HttpResponse(json.dumps({"error": 0}))
+            else:
+                return HttpResponse(json.dumps({"error": 1}))
+
     else:
         urf = UserRegistForm()
 
@@ -55,12 +56,21 @@ def login(req):
             user = Tbl_User.objects.filter(
                 account__exact=account, password__exact=password)
             if user:
-                response = HttpResponseRedirect('/index/')
-
-                response.set_cookie('account', account, 3600)
-                return response
+                return HttpResponse(json.dumps({"error": 1}))
             else:
-                return HttpResponseRedirect('/login/')
+                Tbl_User.objects.create(
+                    username=username,
+                    account=account,
+                    password=password
+                )
+                return HttpResponse(json.dumps({"error": 0}))
+            # if user:
+            #     response = HttpResponseRedirect('/index/')
+
+            #     response.set_cookie('account', account, 3600)
+            #     return response
+            # else:
+            #     return HttpResponseRedirect('/login/')
     else:
         ulf = UserLoginForm()
     c = csrf(req)
