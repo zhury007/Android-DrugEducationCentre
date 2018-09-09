@@ -27,5 +27,16 @@ public class LibraryActivity extends AppCompatActivity {
 //                startActivity(intent);
             }
         });
+
+        Button btn_photo = (Button) findViewById(R.id.button_Photography);
+        btn_photo.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(LibraryActivity.this, PhotographActivity.class);
+                        startActivity(intent);
+                    }
+                }
+        );
     }
 }
