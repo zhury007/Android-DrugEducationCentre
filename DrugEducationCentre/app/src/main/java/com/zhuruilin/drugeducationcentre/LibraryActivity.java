@@ -38,5 +38,14 @@ public class LibraryActivity extends AppCompatActivity {
                     }
                 }
         );
+
+        Button btn_video = (Button) findViewById(R.id.button_Video);
+        btn_video.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LibraryActivity.this, VideoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
