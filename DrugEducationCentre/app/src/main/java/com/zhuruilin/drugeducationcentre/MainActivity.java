@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity
         Banner banner = (Banner) findViewById(R.id.banner);
         //设置图片加载器
         banner.setImageLoader(new GlideImageLoader());
-        Log.d("==========", resourceIdToUri(this, R.drawable.banner_4).toString());
+//        Log.d("==========", resourceIdToUri(this, R.drawable.banner_4).toString());
 
         List images = new ArrayList();
         List titles = new ArrayList();

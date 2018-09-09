@@ -16,8 +16,8 @@ public class PhotographActivity extends AppCompatActivity {
 
     private ParallaxViewPager mParallaxViewPager;
     private String[] mImages = new String[]{
-            "https://drscdn.500px.org/photo/127892951/h%3D600_k%3D1_a%3D1/3487a549dbbe46e2d803a37281543322",
-            "https://drscdn.500px.org/photo/127893495/h%3D600_k%3D1_a%3D1/8462ac67727eecd23c104612ab998633",
+            "http://p3.so.qhmsg.com/t01b69a9a09d010ca88.jpg",
+            "http://pic15.nipic.com/20110729/1369025_003329595000_2.jpg",
             "https://drscdn.500px.org/photo/127892351/h%3D600_k%3D1_a%3D1/883a524bfaf3aa66ef39652928b61f51",
             "https://drscdn.500px.org/photo/127891921/h%3D600_k%3D1_a%3D1/c5aec47c6c924d733f58cec483dc41a6",
             "https://drscdn.500px.org/photo/127913833/h%3D600_k%3D1_a%3D1/7aee64d43cdbe4a1d291effb834137e8",
