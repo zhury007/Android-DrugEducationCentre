@@ -13,18 +13,18 @@ public class DrugActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drug);
+        setContentView(R.layout.activity_drug_fragment);
 
 
         // get the ecstasy activity
-        Button btn_ecstasy = (Button) findViewById(R.id.button_ecstasy);
-        btn_ecstasy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(DrugActivity.this, DrugFragment.class);
-                startActivity(intent);
-            }
-
-        });
+//        Button btn_ecstasy = (Button) findViewById(R.id.button_ecstasy);
+//        btn_ecstasy.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view){
+//                Intent intent = new Intent(DrugActivity.this, DrugFragment.class);
+//                startActivity(intent);
+//            }
+//
+//        });
     }
 }
