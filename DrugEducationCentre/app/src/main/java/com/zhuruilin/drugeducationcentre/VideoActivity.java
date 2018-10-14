@@ -21,10 +21,10 @@ import com.zhuruilin.drugeducationcentre.video.VideoListItem;
 import com.zhuruilin.drugeducationcentre.video.VideoWatchAdapter;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class VideoActivity extends AppCompatActivity implements View.OnClickListener {
-
 
     private RecyclerView mRecyclerView;
 
@@ -64,10 +64,34 @@ public class VideoActivity extends AppCompatActivity implements View.OnClickList
         mRecyclerView = (RecyclerView) findViewById(R.id.video_watch_list);
 
         //添加视频数据
-        String URL = "http://dn-chunyu.qbox.me/fwb/static/images/home/video/video_aboutCY_A.mp4";
-        for (int i = 0; i < 5; ++i) {
-            mLists.add(new OnlineVideoListItem(mVideoPlayerManager, "测试", "http://photocdn.sohu.com/20150709/mp21991057_1436419939431_1_th.jpeg", URL));
+//        String URL = "http://dn-chunyu.qbox.me/fwb/static/images/home/video/video_aboutCY_A.mp4";
+
+        List<OnlineVideoListItem> videoList = Arrays.asList(
+                new OnlineVideoListItem(mVideoPlayerManager,"It's time to stop drug driving-30 second",
+                        "https://flock.bcm.com.au/wp-content/uploads/2016/02/its-time-to-stop-drug-driving-youtube-1455752253kng84.jpg",
+                        "https://www.youtube.com/watch?v=kzDqsIm6iWo"),
+                new OnlineVideoListItem(mVideoPlayerManager,"It's time to stop drug driving-15 second",
+                        "https://www.mac.sa.gov.au/globalassets/campaigns/drug-driving/its-time-to-stop-drug-driving/campaign-drug-driving.jpg",
+                        "https://www.youtube.com/watch?v=GdV4wzK9mqk"),
+                new OnlineVideoListItem(mVideoPlayerManager,"It’s time to stop drug driving - radio 1",
+                        "http://nnimgt-a.akamaihd.net/transform/v1/crop/frm/Y82NNyLS839S9YQGMMc9vG/b4e29ae6-0366-4e48-8895-133218be7062.jpg/r0_0_749_965_w1200_h678_fmax.jpg",
+                        "https://www.youtube.com/watch?v=7ktk7gFAMis"),
+                new OnlineVideoListItem(mVideoPlayerManager,"Driving High - The science of driving on drugs",
+                        "https://www.mac.sa.gov.au/globalassets/banners/dusk_road_mac_banner_image.jpg",
+                        "https://www.youtube.com/watch?v=pQGoojIPzKg&list=PLlx3UkThZdgAlKjCG7DGyYU0rU-GZlB2G")
+
+        );
+
+        for (OnlineVideoListItem video:videoList
+             ) {
+            mLists.add(video);
         }
+        
+//        mLists.add(new OnlineVideoListItem(mVideoPlayerManager,
+//                "测试",
+//                "http://photocdn.sohu.com/20150709/mp21991057_1436419939431_1_th.jpeg",
+//                URL
+//        ));
 
 
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -87,7 +111,7 @@ public class VideoActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int scrollState) {
                 mScrollState = scrollState;
-                if(scrollState == RecyclerView.SCROLL_STATE_IDLE && !mLists.isEmpty()){
+                if (scrollState == RecyclerView.SCROLL_STATE_IDLE && !mLists.isEmpty()) {
 
                     mVideoVisibilityCalculator.onScrollStateIdle(
                             mItemsPositionGetter,
@@ -98,7 +122,7 @@ public class VideoActivity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                if(!mLists.isEmpty()){
+                if (!mLists.isEmpty()) {
                     mVideoVisibilityCalculator.onScroll(
                             mItemsPositionGetter,
                             mLayoutManager.findFirstVisibleItemPosition(),
@@ -117,7 +141,7 @@ public class VideoActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onResume() {
         super.onResume();
-        if(!mLists.isEmpty()){
+        if (!mLists.isEmpty()) {
             // need to call this method from list view handler in order to have filled list
 
             mRecyclerView.post(new Runnable() {
