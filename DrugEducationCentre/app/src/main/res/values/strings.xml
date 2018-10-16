@@ -97,4 +97,5 @@
     <string name="action_sign_up">Sign up</string>
     <string name="error_invalid_password2">Two input password must be consistent</string>
     <string name="title_activity_drug_fragment">DrugFragment</string>
+    <string name="title_activity_photo_fragment">PhotoFragment</string>
 </resources>
