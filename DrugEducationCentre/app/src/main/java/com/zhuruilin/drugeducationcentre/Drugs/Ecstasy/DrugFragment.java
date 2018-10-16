@@ -59,8 +59,6 @@ public class DrugFragment extends AppCompatActivity implements RadioGroup.OnClic
                 switch (checkedId){
                     case R.id.rb_description:
                         System.out.println("rb_description actived");
-
-
                         return;
 
                     case R.id.rb_effect:

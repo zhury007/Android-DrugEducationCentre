@@ -11,20 +11,20 @@ import com.zhuruilin.drugeducationcentre.Drugs.Ecstasy.MyFragment;
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
     private final int PAGER_COUNT = 4;
     private MyFragment myFragment1 = null;
-    private MyFragment myFragment2 = null;
-    private MyFragment myFragment3 = null;
-    private MyFragment myFragment4 = null;
+    private MyFragment2 myFragment2 = null;
+    private MyFragment3 myFragment3 = null;
+    private MyFragment4 myFragment4 = null;
 
     public MyFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
         myFragment1 = new MyFragment();
-        myFragment1.setContent("第一");
-        myFragment2 = new MyFragment();
-        myFragment2.setContent("第二");
-        myFragment3 = new MyFragment();
-        myFragment3.setContent("第三");
-        myFragment4 = new MyFragment();
-        myFragment4.setContent("第四");
+        myFragment1.setTitle("What is ecstasy (MDMA)?");
+        myFragment2 = new MyFragment2();
+        myFragment2.setTitle("The impacts of ecstasy (MDMA) on you");
+        myFragment3 = new MyFragment3();
+        myFragment3.setTitle("第三");
+        myFragment4 = new MyFragment4();
+        myFragment4.setTitle("Ecstasy and the law");
     }
 
     @Override
