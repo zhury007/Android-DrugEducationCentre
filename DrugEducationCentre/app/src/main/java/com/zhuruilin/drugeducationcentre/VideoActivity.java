@@ -1,5 +1,6 @@
 package com.zhuruilin.drugeducationcentre;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -65,20 +66,22 @@ public class VideoActivity extends AppCompatActivity implements View.OnClickList
 
         //添加视频数据
 //        String URL = "http://dn-chunyu.qbox.me/fwb/static/images/home/video/video_aboutCY_A.mp4";
+//        String uri="android.resource://"+getPackageName()+"/"+R.raw.ass;
+//        videoView.setVideoURI(Uri.parse(uri));
 
         List<OnlineVideoListItem> videoList = Arrays.asList(
                 new OnlineVideoListItem(mVideoPlayerManager,"It's time to stop drug driving-30 second",
                         "https://flock.bcm.com.au/wp-content/uploads/2016/02/its-time-to-stop-drug-driving-youtube-1455752253kng84.jpg",
-                        "https://www.youtube.com/watch?v=kzDqsIm6iWo"),
+                        "android.resource://"+getPackageName()+"/"+R.raw.video1),
                 new OnlineVideoListItem(mVideoPlayerManager,"It's time to stop drug driving-15 second",
                         "https://www.mac.sa.gov.au/globalassets/campaigns/drug-driving/its-time-to-stop-drug-driving/campaign-drug-driving.jpg",
-                        "https://www.youtube.com/watch?v=GdV4wzK9mqk"),
+                        "android.resource://"+getPackageName()+"/"+R.raw.video2),
                 new OnlineVideoListItem(mVideoPlayerManager,"It’s time to stop drug driving - radio 1",
                         "http://nnimgt-a.akamaihd.net/transform/v1/crop/frm/Y82NNyLS839S9YQGMMc9vG/b4e29ae6-0366-4e48-8895-133218be7062.jpg/r0_0_749_965_w1200_h678_fmax.jpg",
-                        "https://www.youtube.com/watch?v=7ktk7gFAMis"),
+                        "android.resource://"+getPackageName()+"/"+R.raw.video3),
                 new OnlineVideoListItem(mVideoPlayerManager,"Driving High - The science of driving on drugs",
                         "https://www.mac.sa.gov.au/globalassets/banners/dusk_road_mac_banner_image.jpg",
-                        "https://www.youtube.com/watch?v=pQGoojIPzKg&list=PLlx3UkThZdgAlKjCG7DGyYU0rU-GZlB2G")
+                        "android.resource://"+getPackageName()+"/"+R.raw.video4)
 
         );
 
