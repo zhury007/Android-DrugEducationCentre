@@ -11,11 +11,10 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.youth.banner.Banner;
-import com.zhuruilin.drugeducationcentre.Drugs.DrugPhoto.PhotoPagerAdapter;
 import com.zhuruilin.drugeducationcentre.GlideImageLoader;
 import com.zhuruilin.drugeducationcentre.R;
 import android.util.Log;
-import com.zhuruilin.drugeducationcentre.Drugs.DrugPhoto.DrugPhotoFragment;
+//import com.zhuruilin.drugeducationcentre.Drugs.DrugPhoto.DrugPhotoFragment;
 
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -26,7 +25,7 @@ import java.util.List;
 
 public class MyFragment extends Fragment {
     private String title;
-    PhotoPagerAdapter photoPagerAdapter;
+//    PhotoPagerAdapter photoPagerAdapter;
 
     public static final String ANDROID_RESOURCE = "android.resource://";
     public static final String FOREWARD_SLASH = "/";
