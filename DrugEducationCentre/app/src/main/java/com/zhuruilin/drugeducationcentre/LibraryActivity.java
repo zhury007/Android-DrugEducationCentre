@@ -20,7 +20,7 @@ public class LibraryActivity extends AppCompatActivity {
         btn_explore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://wj.qq.com/s/2342832/f761");
+                Uri uri = Uri.parse("https://www.facebook.com/24hours24reasons/?ref=bookmarks");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
 //                Intent intent = new Intent(LibraryActivity.this, QuestionnaireActivity.class);
