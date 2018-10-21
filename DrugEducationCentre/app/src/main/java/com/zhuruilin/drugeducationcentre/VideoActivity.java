@@ -26,6 +26,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class VideoActivity extends AppCompatActivity implements View.OnClickListener {
+    public static final String ANDROID_RESOURCE = "android.resource://";
+    public static final String FOREWARD_SLASH = "/";
+    public static final String FILE_PATH = "http://p9q9a814b.bkt.clouddn.com/";
 
     private RecyclerView mRecyclerView;
 
@@ -65,23 +68,27 @@ public class VideoActivity extends AppCompatActivity implements View.OnClickList
         mRecyclerView = (RecyclerView) findViewById(R.id.video_watch_list);
 
         //添加视频数据
-//        String URL = "http://dn-chunyu.qbox.me/fwb/static/images/home/video/video_aboutCY_A.mp4";
+        String URLtest = "http://dn-chunyu.qbox.me/fwb/static/images/home/video/video_aboutCY_A.mp4";
 //        String uri="android.resource://"+getPackageName()+"/"+R.raw.ass;
 //        videoView.setVideoURI(Uri.parse(uri));
 
         List<OnlineVideoListItem> videoList = Arrays.asList(
                 new OnlineVideoListItem(mVideoPlayerManager,"It's time to stop drug driving-30 second",
                         "https://flock.bcm.com.au/wp-content/uploads/2016/02/its-time-to-stop-drug-driving-youtube-1455752253kng84.jpg",
-                        "android.resource://"+getPackageName()+"/"+R.raw.video1),
+//                        URLtest),
+                        FILE_PATH + "video1.mp4"),
                 new OnlineVideoListItem(mVideoPlayerManager,"It's time to stop drug driving-15 second",
                         "https://www.mac.sa.gov.au/globalassets/campaigns/drug-driving/its-time-to-stop-drug-driving/campaign-drug-driving.jpg",
-                        "android.resource://"+getPackageName()+"/"+R.raw.video2),
+//                        URLtest),
+                        FILE_PATH + "video2.mp4"),
                 new OnlineVideoListItem(mVideoPlayerManager,"It’s time to stop drug driving - radio 1",
                         "http://nnimgt-a.akamaihd.net/transform/v1/crop/frm/Y82NNyLS839S9YQGMMc9vG/b4e29ae6-0366-4e48-8895-133218be7062.jpg/r0_0_749_965_w1200_h678_fmax.jpg",
-                        "android.resource://"+getPackageName()+"/"+R.raw.video3),
+//                        URLtest),
+                        FILE_PATH + "video3.mp4"),
                 new OnlineVideoListItem(mVideoPlayerManager,"Driving High - The science of driving on drugs",
                         "https://www.mac.sa.gov.au/globalassets/banners/dusk_road_mac_banner_image.jpg",
-                        "android.resource://"+getPackageName()+"/"+R.raw.video4)
+//                        URLtest)
+                        FILE_PATH + "video4.mp4")
 
         );
 
