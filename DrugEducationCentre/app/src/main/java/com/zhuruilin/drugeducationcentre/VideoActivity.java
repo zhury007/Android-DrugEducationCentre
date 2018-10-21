@@ -28,7 +28,7 @@ import java.util.List;
 public class VideoActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String ANDROID_RESOURCE = "android.resource://";
     public static final String FOREWARD_SLASH = "/";
-    public static final String FILE_PATH = "http://p9q9a814b.bkt.clouddn.com/";
+    public static final String FILE_PATH = "https://drug-education-centre.oss-ap-southeast-1.aliyuncs.com/";
 
     private RecyclerView mRecyclerView;
 

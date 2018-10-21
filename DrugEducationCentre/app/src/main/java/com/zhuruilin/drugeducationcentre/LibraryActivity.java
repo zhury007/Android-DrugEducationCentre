@@ -20,7 +20,7 @@ public class LibraryActivity extends AppCompatActivity {
         btn_explore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.facebook.com/24hours24reasons/?ref=bookmarks");
+                Uri uri = Uri.parse("https://wj.qq.com/s/2342832/f761");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
 //                Intent intent = new Intent(LibraryActivity.this, QuestionnaireActivity.class);
@@ -44,6 +44,16 @@ public class LibraryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LibraryActivity.this, VideoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_facebook = (Button) findViewById(R.id.button_Quiz);
+        btn_facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.facebook.com/24hours24reasons/?ref=bookmarks");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
         });
