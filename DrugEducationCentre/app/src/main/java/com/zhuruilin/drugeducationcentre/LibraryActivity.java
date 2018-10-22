@@ -57,5 +57,16 @@ public class LibraryActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        
+                //activity library of the drugs
+        Button btn_Library = (Button) findViewById(R.id.button_library);
+        btn_Library.setOnClickListener(new View.OnClickListener() {
+            @Override
+                    public void onClick(View view){
+                         Intent intent = new Intent(LibraryActivity.this, DrugActivity.class);
+                         startActivity(intent);
+            }
+
+        });
     }
 }
