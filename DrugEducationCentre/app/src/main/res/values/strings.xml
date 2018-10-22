@@ -98,4 +98,15 @@
     <string name="error_invalid_password2">Two input password must be consistent</string>
     <string name="title_activity_drug_fragment">DrugFragment</string>
     <string name="title_activity_photo_fragment">PhotoFragment</string>
+
+
+    <string-array name="item_name">
+        <item>SELF-ADMINISTRATION OF ECSTASY / MDMA</item>
+        <item>ADMINISTRATION OF ECSTASY / MDMA TO OTHERS</item>
+        <item>POSSESSION OF ECSTASY / MDMA</item>
+        <item>SUPPLY OF ECSTASY / MDMA</item>
+        <item>SUPPLY ECSTASY / MDMA ON AN ONGOING BASIS</item>
+    </string-array>
+    <string name="title_activity_methamphetamine_fragment">MethamphetamineFragment</string>
+
 </resources>
