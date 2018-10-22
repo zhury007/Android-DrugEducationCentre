@@ -48,6 +48,7 @@ public class DrugFragment extends AppCompatActivity implements RadioGroup.OnClic
 
     private void bindViews() {
         txt_topbar = (TextView) findViewById(R.id.title);
+        txt_topbar.setText("Ecstasy");
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         rb_description = (RadioButton) findViewById(R.id.rb_description);
         rb_effect = (RadioButton) findViewById(R.id.rb_effect);

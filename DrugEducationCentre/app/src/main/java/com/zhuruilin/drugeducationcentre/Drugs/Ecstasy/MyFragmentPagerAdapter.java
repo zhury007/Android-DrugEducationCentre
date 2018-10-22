@@ -20,11 +20,11 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
         myFragment1 = new MyFragment();
         myFragment1.setTitle("What is ecstasy (MDMA)?");
         myFragment2 = new MyFragment2();
-        myFragment2.setTitle("The impacts of ecstasy (MDMA) on you");
+        myFragment2.setTitle("Ecstasy (MDMA): Effects on the Body & Mind");
         myFragment3 = new MyFragment3();
-        myFragment3.setTitle("第三");
+        myFragment3.setTitle("Other Reasons");
         myFragment4 = new MyFragment4();
-        myFragment4.setTitle("Ecstasy and the law");
+
     }
 
     @Override

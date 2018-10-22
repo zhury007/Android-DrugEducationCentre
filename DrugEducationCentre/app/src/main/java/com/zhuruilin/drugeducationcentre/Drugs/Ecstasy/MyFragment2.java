@@ -4,27 +4,38 @@ import android.view.View;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import com.zhuruilin.drugeducationcentre.R;
 import android.util.Log;
+import android.widget.TextView.BufferType;
 
 public class MyFragment2 extends Fragment {
-    private String title,description;
+    private String title;
 
     public MyFragment2(){};
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fg_content,container,false);
-        //先提取ScrollView
-        ScrollView scrollView = (ScrollView) view.findViewById(R.id.ecstasy_scroll_view);
+        View view = inflater.inflate(R.layout.fg_content2,container,false);
 
-        TextView txt_content = (TextView) view.findViewById(R.id.txt_title);
-        TextView txt_description = (TextView) view.findViewById(R.id.text_under_title);
+        TextView txt_content = (TextView) view.findViewById(R.id.txt_title2);
         txt_content.setText(title);
-        txt_description.setText(description);
+        txt_content = (TextView) view.findViewById(R.id.txt_description2);
+        txt_content.setText("Duration of the Ecstasy?");
+
+        txt_content = (TextView)view.findViewById(R.id.txt3);
+        txt_content.setText("The effects of ecstasy are usually felt about 20 minutes to an hour after it’s taken and last for around 6 hours.");
+
+
+
+
+
+        ImageView imageView = (ImageView) view.findViewById(R.id.imageView2);
+
+
         Log.e("HEHE", "++");
         return view;
     }

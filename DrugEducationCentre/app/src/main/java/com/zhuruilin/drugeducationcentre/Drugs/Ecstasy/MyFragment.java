@@ -14,7 +14,7 @@ import com.youth.banner.Banner;
 import com.zhuruilin.drugeducationcentre.GlideImageLoader;
 import com.zhuruilin.drugeducationcentre.R;
 import android.util.Log;
-//import com.zhuruilin.drugeducationcentre.Drugs.DrugPhoto.DrugPhotoFragment;
+
 
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -25,7 +25,6 @@ import java.util.List;
 
 public class MyFragment extends Fragment {
     private String title;
-//    PhotoPagerAdapter photoPagerAdapter;
 
     public static final String ANDROID_RESOURCE = "android.resource://";
     public static final String FOREWARD_SLASH = "/";
@@ -39,8 +38,6 @@ public class MyFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fg_content,container,false);
-        //先提取ScrollView
-        ScrollView scrollView = (ScrollView) view.findViewById(R.id.ecstasy_scroll_view);
         //--------
         TextView txt_content = (TextView) view.findViewById(R.id.txt_title);
         txt_content.setText(title);
