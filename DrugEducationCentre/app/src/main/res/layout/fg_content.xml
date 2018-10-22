@@ -96,10 +96,10 @@
                 android:layout_width="312dp"
 
                 android:layout_height="171dp"
+                android:layout_marginBottom="50dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginTop="50dp"
-                android:layout_marginBottom="50dp"
                 android:gravity="clip_horizontal">
 
             </com.youth.banner.Banner>
